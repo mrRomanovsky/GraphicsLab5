@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GraphicsLab5
 {
-    public partial class Form1 : Form
+    public partial class task1 : Form
     {
-        public Form1()
+        public task1()
         {
             InitializeComponent();
-        }
-
-        private void task1Button_Click(object sender, EventArgs e)
-        {
-            var task1 = new task1();
-            task1.ShowDialog();
         }
     }
 }
