@@ -60,6 +60,7 @@
             this.task3Button.TabIndex = 2;
             this.task3Button.Text = "task3";
             this.task3Button.UseVisualStyleBackColor = true;
+            this.task3Button.Click += new System.EventHandler(this.task3Button_Click);
             // 
             // Form1
             // 
