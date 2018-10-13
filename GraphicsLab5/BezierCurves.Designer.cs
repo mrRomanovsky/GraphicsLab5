@@ -32,17 +32,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.x1TextBox = new System.Windows.Forms.TextBox();
             this.y1TextBox = new System.Windows.Forms.TextBox();
-            this.x2TextBox = new System.Windows.Forms.TextBox();
-            this.y2TextBox = new System.Windows.Forms.TextBox();
-            this.x3TextBox = new System.Windows.Forms.TextBox();
-            this.y3TextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.x2TextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.y2TextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.x3TextBox = new System.Windows.Forms.TextBox();
+            this.y3TextBox = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(532, 346);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // x1TextBox
             // 
@@ -78,35 +79,6 @@
             this.y1TextBox.Name = "y1TextBox";
             this.y1TextBox.Size = new System.Drawing.Size(100, 20);
             this.y1TextBox.TabIndex = 3;
-            // 
-            // x2TextBox
-            // 
-            this.x2TextBox.Location = new System.Drawing.Point(662, 219);
-            this.x2TextBox.Name = "x2TextBox";
-            this.x2TextBox.Size = new System.Drawing.Size(100, 20);
-            this.x2TextBox.TabIndex = 4;
-            // 
-            // y2TextBox
-            // 
-            this.y2TextBox.Location = new System.Drawing.Point(662, 269);
-            this.y2TextBox.Name = "y2TextBox";
-            this.y2TextBox.Size = new System.Drawing.Size(100, 20);
-            this.y2TextBox.TabIndex = 5;
-            this.y2TextBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // x3TextBox
-            // 
-            this.x3TextBox.Location = new System.Drawing.Point(662, 351);
-            this.x3TextBox.Name = "x3TextBox";
-            this.x3TextBox.Size = new System.Drawing.Size(100, 20);
-            this.x3TextBox.TabIndex = 6;
-            // 
-            // y3TextBox
-            // 
-            this.y3TextBox.Location = new System.Drawing.Point(662, 404);
-            this.y3TextBox.Name = "y3TextBox";
-            this.y3TextBox.Size = new System.Drawing.Size(100, 20);
-            this.y3TextBox.TabIndex = 7;
             // 
             // label1
             // 
@@ -126,6 +98,15 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "y1";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(684, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Points";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -135,6 +116,13 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "x2";
             // 
+            // x2TextBox
+            // 
+            this.x2TextBox.Location = new System.Drawing.Point(662, 219);
+            this.x2TextBox.Name = "x2TextBox";
+            this.x2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.x2TextBox.TabIndex = 4;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -143,6 +131,14 @@
             this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "y2";
+            // 
+            // y2TextBox
+            // 
+            this.y2TextBox.Location = new System.Drawing.Point(662, 269);
+            this.y2TextBox.Name = "y2TextBox";
+            this.y2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.y2TextBox.TabIndex = 5;
+            this.y2TextBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -162,20 +158,36 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "x3";
             // 
-            // label7
+            // x3TextBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(684, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Points";
+            this.x3TextBox.Location = new System.Drawing.Point(662, 351);
+            this.x3TextBox.Name = "x3TextBox";
+            this.x3TextBox.Size = new System.Drawing.Size(100, 20);
+            this.x3TextBox.TabIndex = 6;
+            // 
+            // y3TextBox
+            // 
+            this.y3TextBox.Location = new System.Drawing.Point(662, 404);
+            this.y3TextBox.Name = "y3TextBox";
+            this.y3TextBox.Size = new System.Drawing.Size(100, 20);
+            this.y3TextBox.TabIndex = 7;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(518, 415);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 15;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // BezierCurves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -205,16 +217,17 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox x1TextBox;
         private System.Windows.Forms.TextBox y1TextBox;
-        private System.Windows.Forms.TextBox x2TextBox;
-        private System.Windows.Forms.TextBox y2TextBox;
-        private System.Windows.Forms.TextBox x3TextBox;
-        private System.Windows.Forms.TextBox y3TextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox x2TextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox y2TextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox x3TextBox;
+        private System.Windows.Forms.TextBox y3TextBox;
+        private System.Windows.Forms.Button clearButton;
     }
 }
