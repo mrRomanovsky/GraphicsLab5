@@ -17,6 +17,10 @@ namespace GraphicsLab5
             InitializeComponent();
         }
 
+        private void task1Button_Click(object sender, EventArgs e)
+        {
+            var task1 = new task1();
+            task1.ShowDialog();
         private void task3Button_Click(object sender, EventArgs e)
         {
             var task3Form = new BezierCurves();
