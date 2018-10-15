@@ -28,5 +28,11 @@ namespace GraphicsLab5
             var task3Form = new BezierCurves();
             task3Form.ShowDialog();
         }
+
+        private void task2Button_Click(object sender, EventArgs e)
+        {
+            var task2 = new Task2();
+            task2.ShowDialog();
+        }
     }
 }

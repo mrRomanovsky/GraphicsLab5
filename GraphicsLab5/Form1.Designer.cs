@@ -51,6 +51,7 @@
             this.task2Button.TabIndex = 1;
             this.task2Button.Text = "task2";
             this.task2Button.UseVisualStyleBackColor = true;
+            this.task2Button.Click += new System.EventHandler(this.task2Button_Click);
             // 
             // task3Button
             // 
